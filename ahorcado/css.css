@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+body{
+  height: 100vh;
+  width: 960px;
+  margin: 0 auto;
+
+  background-image: url('../ahorcado/imagenes/tumblr_m94p1epnqX1rd7x7ho1_1280.gif');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+#game{
+    height: 80vh;
+    width: 960px;
+    margin: 20px auto;
+    overflow: hidden;
+    background-color: rgb(0, 255, 145);
+    border-radius: 10px;
+}
+
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 400px;
+    border: 5px groove rgb(0, 0, 0);
+    animation: block 3s infinite linear;
+}
+
+#hole{
+    width: 50px;
+    height: 150px;
+    position: relative;
+    background-color: rgb(0, 255, 145);
+    left: 400px;
+    top: -500px;
+    border-radius: 5px;
+    animation: block 3s infinite linear;
+
+}
+
+#bird{
+    width: 100px;
+    height:100px;
+    background-image: url(../ahorcado/src/cuervo.png);
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    border-radius: 5%;
+    z-index: 99999;
+}
+
+
+.gameOverDiv{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(178, 144, 238);
+    background-image: linear-gradient(rgba(16, 13, 13, 0.613) ,rgb(255, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.gameover{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 34px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+.gameover span{
+    color: rgb(115, 0, 0);
+    font-size: 23px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.gameOverDiv a{
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 8px 12px;
+    background-color: rgb(218, 47, 16);
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: all 0.5s;
+    background-image: -moz-repeating-linear-gradient();
+    
+}
+.gameOverDiv a:hover{
+    color: rgba(128, 2, 0, 0.282);
+    background-color: transparent;
+} 
+
+
+
+
+
+@keyframes block{
+    0%{
+        left: 400px;
+    }
+    100%{
+        left: -50px;
+    }
+
+}
+
